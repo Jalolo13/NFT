@@ -5,10 +5,6 @@ let modalBLock = document.querySelector(".modal-block");
 let is404Displayed = false;
 let seedInput = document.querySelector(".modal-block-input");
 let registrationBtn = document.querySelector(".modal-btn-registration");
-let swiperAll = document.querySelector(".swiper-all");
-let swiperTop = document.querySelector(".swiper-top");
-let swiperAllBtn = document.querySelector(".all-btn");
-let swiperTopBtn = document.querySelector(".top-btn");
 
 let users = [
     {
@@ -18,23 +14,6 @@ let users = [
         seed: "654321",
     },
 ];
-
-swiperAllBtn.addEventListener("click", () => {
-    swiperAll.style.display = "flex";
-    swiperAllBtn.classList.add("active");
-    swiperTopBtn.classList.remove("active");
-    swiperTop.style.display = "none";
-    swiperAll.autoplay.start(); // Включение автовоспроизведения для swiperAll
-    swiperTop.autoplay.stop(); // Остановка автовоспроизведения для swiperTop
-});
-swiperTopBtn.addEventListener("click", () => {
-    swiperTop.style.display = "flex";
-    swiperTopBtn.classList.add("active");
-    swiperAllBtn.classList.remove("active");
-    swiperAll.style.display = "none";
-    swiperTop.autoplay.start(); // Включение автовоспроизведения для swiperTop
-    swiperAll.autoplay.stop(); // Остановка автовоспроизведения для swiperAll
-});
 
 seedInput.oninput = function () {
     if (seedInput.value.length > 5) {
