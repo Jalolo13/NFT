@@ -1,0 +1,69 @@
+.faq-main
+    display: flex
+    justify-content: space-between
+    position: relative
+
+.faq-main-img
+    width: max-content
+    height: 100%
+    &:first-child
+        margin-left: 30px
+        margin-top: 50px
+    &:last-child
+        margin-right: 40px
+
+.faq-title
+    font-size: 52px
+    font-weight: 600
+    text-align: center
+    line-height: 63px
+
+.faq-subtitle
+    font-size: 18px
+    color: #A29B9B
+    text-align: center
+    margin-top: 25px
+    line-height: 26.28px
+
+.faq-accordeons
+    margin-top: 50px
+
+.faq-accordeon-text
+    font-size: 24px
+    font-weight: 500
+
+.faq-accordeon
+    display: flex
+    flex-direction: column
+    margin-top: 16px
+    cursor: pointer
+    &:first-child
+        margin-top: 0
+
+.faq-accordeon-inner
+    display: flex
+    justify-content: space-between
+    max-width: 100%
+    padding: 35px 40px
+    background: #111113
+    border-top-right-radius: 8px
+    border-top-left-radius: 8px
+    transition: .3s
+    align-items: center
+
+.faq-accordeon-content
+    border-bottom-right-radius: 8px
+    border-bottom-left-radius: 8px
+    background: #111113
+    padding: 0 35px
+    max-height: 0
+    overflow: hidden
+    transition: .5s ease-in-out
+    font-size: 18px
+    line-height: 26px
+    color: rgba(255,255,255,.6)
+
+.faq-accordeon-arrow
+    opacity: .4
+    height: fit-content
+    transition: .5s ease-in-out

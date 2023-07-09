@@ -1,0 +1,81 @@
+.modal-registration
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    z-index: -1
+    opacity: 0
+    width: 100%
+    height: 100%
+    transition: .3s
+    background: rgba(0,0,0,.3)
+
+.modal-block
+    width: 44%
+    min-height: 328px
+    background: #111113
+    border-radius: 8px
+    padding: 30px
+    box-sizing: border-box
+
+.modal-block-subtitle
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.modal-block-subtitle-span
+    font-weight: 600
+    margin-left: 12px
+    font-size: 20px
+    flex: 1 1 auto
+
+.modal-block-close
+    opacity: .4
+    cursor: pointer
+    transition: .3s
+    width: 12px
+    height: 12px
+    &:hover
+        opacity: 1
+
+.modal-block-input
+    padding: 16px
+    box-sizing: border-box
+    border-radius: 16px
+    font-size: 18px
+    width: 80%
+    transition: .3s
+    border: 1px solid #232325
+    background: none
+    min-height: 82px
+    &:focus
+        background: #232325
+    &::placeholder
+        font-weight: 500
+        font-size: 18px
+
+.modal-block-title
+    font-size: 28px
+    font-weight: 600
+    margin-top: 36px
+    margin-bottom: 26px
+
+.modal-btn-registration
+    margin-top: 24px
+    background: rgba(255, 255, 255, 0.05)
+    opacity: .4
+    cursor: auto
+    &:hover
+        background: rgba(255, 255, 255, 0.05)
+    &.active
+        cursor: pointer
+        background: #0166EB
+        opacity: 1
+        &:hover
+            background: #2281FF
+.modal-wallet
+    opacity: .4
+
+.modal-valid
+    color: red
+    margin-top: 15px
