@@ -37,6 +37,9 @@ button
     padding: 0 120px
     align-items: center
 
+.footer
+    background: rgba(12, 12, 13, 1)
+
 .main
     flex: 1 1 auto
     background: #000
@@ -49,6 +52,8 @@ button
     span
         color: #64A6FD
 .logo, .logo-footer
+    width: max-content
+    text-decoration: none
     margin: 0
     color: #fff
     font-size: 24px
@@ -58,7 +63,9 @@ button
     font-size: 18px
     color: #A29B9B
     margin-top: 18px
-.logo-links
+
+.logo-links, .logo-links-footer
+    flex: 1 1 auto
     display: flex
     align-items: center
 
@@ -71,7 +78,11 @@ button
     &:hover
         color: #fff
 
-.btn-registration, .modal-btn-registration
+.header-inner
+    display: flex
+    align-items: center
+
+.btn-registration, .modal-btn-registration, .modal-error-btn
     font-size: 16px
     background: #0166EB
     color: #fff
@@ -94,6 +105,8 @@ button
     justify-content: space-between
 
 .main-block-btn-case
+    color: #fff
+    text-decoration: none
     padding: 11px 22px
     background: #0166EB
     font-size: 20px
@@ -104,6 +117,10 @@ button
         background: #2281FF
 
 .main-block-btns
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 15px
     margin-top: 32px
 
 .main-block-btn-nft
@@ -123,7 +140,7 @@ button
 
 .main-nft-case
     background: #111113
-    width: 437px
+    width: 100%
     min-height: 269px
     border-radius: 8px
     font-size: 32px
@@ -134,3 +151,6 @@ button
 
 .logo-footer
     color: rgba(255,255,255,.7)
+
+.account-inventory-adaptive
+    display: none

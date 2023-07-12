@@ -16,7 +16,25 @@
                 <div class="menu">
                     <nav>
                         <a class="logo" href="index.html">LOGOTYPE</a>
+                        <a href="inventory.html" class="faq">Inventory</a>
                         <a href="faq-auth.html" class="faq">FAQ</a>
+                        <div class="account-adaptive">
+                            <img
+                                class="account-avatar"
+                                src="img/Rectangle 3053.svg"
+                                alt="avatar"
+                            />
+                            <div class="account-inner">
+                                <p>Account Name</p>
+                                <p>0x354...4C4c</p>
+                            </div>
+                        </div>
+                        <a
+                            href="inventory.html"
+                            class="account-inventory-adaptive"
+                        >
+                            <img src="img/inventory.svg" alt="btn-img" />
+                        </a>
                     </nav>
                 </div>
             </div>
@@ -28,15 +46,38 @@
                 </div>
                 <div class="logo-links">
                     <a class="logo" href="index.html">LOGOTYPE</a>
+                    <a href="inventory.html" class="faq">Inventory</a>
                     <a href="faq.html" class="faq">FAQ</a>
                 </div>
-                <button class="btn-registration">
-                    <img
-                        src="img/Wallet.png"
-                        class="wallet"
-                        alt="wallet"
-                    />Connect Wallet
-                </button>
+                <div class="header-inner">
+                    <div class="deposit">
+                        <div class="deposit-begin">
+                            <div class="deposit-number"></div>
+                            <div class="deposit-img-btc"></div>
+                            <img
+                                src="img/Property 1=Hover (2).png"
+                                alt="arrow"
+                                class="deposit-arrow"
+                            />
+                        </div>
+                        <button class="deposit-btn">Deposit</button>
+                        <div class="deposit-popup"></div>
+                    </div>
+                    <div class="account">
+                        <img
+                            class="account-avatar"
+                            src="img/Rectangle 3053.svg"
+                            alt="avatar"
+                        />
+                        <div class="account-inner">
+                            <p>Account Name</p>
+                            <p>0x354...4C4c</p>
+                        </div>
+                    </div>
+                    <a href="inventory.html" class="account-inventory">
+                        <img src="img/inventory.svg" alt="btn-img" />
+                    </a>
+                </div>
             </header>
             <main class="main">
                 <div class="faq-inner">
@@ -134,16 +175,19 @@
                     <a href="faq.html" class="faq-footer">FAQ</a>
                 </div>
             </footer>
-            <div class="modal-registration">
-                <div class="modal-block">
+            <div class="modal-deposit">
+                <div class="modal-block-copied">
+                    <img src="img/copy.svg" alt="copy" /> Address copied!
+                </div>
+                <div class="modal-block modal-deposit-block">
                     <div class="modal-block-subtitle">
                         <img
-                            style="height: fit-content"
-                            src="img/Frame 21.png"
+                            style="height: fit-content; opacity: 0.6"
+                            src="img/Wallet.png"
                             alt="img"
                         />
                         <span class="modal-block-subtitle-span"
-                            >Connect via Seed Phrase</span
+                            >Deposit Menu</span
                         >
                         <button style="width: 12px; height: 12px">
                             <img
@@ -153,26 +197,37 @@
                             />
                         </button>
                     </div>
-                    <h2 class="modal-block-title">
-                        Enter your seed-phrase to login
-                    </h2>
-                    <input
-                        class="modal-block-input"
-                        type="text"
-                        placeholder="Seed-Phrase"
-                    />
-                    <button class="modal-btn-registration" disabled>
-                        <img
-                            src="img/Wallet.png"
-                            class="modal-wallet"
-                            alt="wallet"
-                        />
-                        Connect Wallet
-                    </button>
+                    <div class="modal-btcs">
+                        <button class="modal-btc m-btc active">
+                            <img src="img/bitcoin.svg" alt="btc" />BTC
+                        </button>
+                        <button class="modal-btc m-eth">
+                            <img src="img/bitcoin-1.svg" alt="btc" />ETH
+                        </button>
+                        <button class="modal-btc m-usdt">
+                            <img src="img/Group.svg" alt="btc" />USDT-TRC20
+                        </button>
+                    </div>
+                    <h2 class="modal-block-title">Address for deposit</h2>
+                    <div class="modal-block-seed">
+                        <span class="modal-block-copy">Скопировать</span>
+                        <span class="modal-block-copy-seed"
+                            >13BsXYSq6NNj5GXv7S3iqCwywrkBrNJZb8
+                        </span>
+                        <button class="modal-copy">
+                            <img src="img/copy.svg" alt="copy" />
+                        </button>
+                    </div>
+                    <div class="qr">
+                        <img src="img/Frame 27 (1).png" alt="qr" />
+                        <p>Send only BTC to this address.</p>
+                        <p>1 confirmation required.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="js/index.js"></script>
+        <script src="js/accordeon.js"></script>
         <script src="js/burger.js"></script>
+        <script src="js/popup-deposit.js"></script>
     </body>
 </html>

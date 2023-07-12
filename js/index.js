@@ -1,11 +1,10 @@
+let is404Displayed = false;
+let seedInput = document.querySelector(".modal-block-input");
+let registrationBtn = document.querySelector(".modal-btn-registration");
 let btnReg = document.querySelector(".btn-registration");
 let modal = document.querySelector(".modal-registration");
 let modalClose = document.querySelector(".modal-block-close");
 let modalBLock = document.querySelector(".modal-block");
-let is404Displayed = false;
-let seedInput = document.querySelector(".modal-block-input");
-let registrationBtn = document.querySelector(".modal-btn-registration");
-
 let users = [
     {
         seed: "123456",
@@ -41,54 +40,18 @@ const eventRegistration = () => {
     }
 };
 
+modalClose.addEventListener("click", () => {
+    modal.style.opacity = 0;
+    modal.style.zIndex = -1;
+});
+btnReg.addEventListener("click", () => {
+    modal.style.opacity = 1;
+    modal.style.zIndex = 10;
+});
 document.addEventListener("keyup", (event) => {
     if (event.code === "Enter") {
         eventRegistration();
     }
 });
 
-btnReg.addEventListener("click", () => {
-    modal.style.opacity = 1;
-    modal.style.zIndex = 10;
-});
-
-modalClose.addEventListener("click", () => {
-    modal.style.opacity = 0;
-    modal.style.zIndex = -1;
-});
-
 registrationBtn.addEventListener("click", eventRegistration);
-
-document.querySelectorAll(".faq-accordeon-inner").forEach((el) => {
-    el.addEventListener("click", () => {
-        let content = el.nextElementSibling;
-        let arrow = el.querySelector(".faq-accordeon-arrow");
-        if (content.style.maxHeight) {
-            document
-                .querySelectorAll(".faq-accordeon-content")
-                .forEach((el) => {
-                    el.style.maxHeight = null;
-                    el.style.paddingBottom = null;
-                });
-            document.querySelectorAll(".faq-accordeon-arrow").forEach((el) => {
-                el.style.transform = "rotate(0)";
-                el.style.opacity = 0.4;
-            });
-        } else {
-            document
-                .querySelectorAll(".faq-accordeon-content")
-                .forEach((el) => {
-                    el.style.maxHeight = null;
-                    el.style.paddingBottom = null;
-                });
-            document.querySelectorAll(".faq-accordeon-arrow").forEach((el) => {
-                el.style.transform = "rotate(0)";
-                el.style.opacity = 0.4;
-            });
-            arrow.style.opacity = 1;
-            arrow.style.transform = "rotate(180deg)";
-            content.style.paddingBottom = "40px";
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    });
-});

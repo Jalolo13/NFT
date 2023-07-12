@@ -1,0 +1,76 @@
+.you-won
+    font-size: 34px
+
+.inventory-cards
+    margin-top: 36px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    gap: 24px
+
+.inventory-card
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 322px
+    min-height: 146px
+    padding: 16px 24px
+    box-sizing: border-box
+    border-radius: 4px
+    &:nth-child(odd)
+        background: radial-gradient(80.63% 100% at 50% 0%, rgba(1, 102, 235, 0.385) 0%, rgba(1, 102, 235, 0.17) 100%)
+    &:nth-child(even)
+        background: radial-gradient(80.63% 100% at 50% 0%, rgba(235, 85, 1, 0.5775) 0%, rgba(235, 87, 1, 0.255) 100%)
+
+.inventory-card-inner
+    display: flex
+    flex-direction: column
+    p
+        font-size: 22px
+        font-weight: 600
+    button
+        opacity: .6
+        font-weight: 600
+        background: rgba(255, 255, 255, 0.1)
+        text-transform: uppercase
+        padding: 8px 12px
+        border-radius: 4px
+        margin-top: 25px
+        width: max-content
+        transition: .3s
+        &:hover
+            opacity: 1
+            background: rgba(255, 255, 255, 0.3)
+
+.modal-error-inner
+    padding: 24px 32px
+
+.modal-error-begin
+    display: flex
+    justify-content: start
+    align-items: center
+    img
+        margin-right: 12px
+
+.modal-error-subtitle
+    flex: 1 1 auto
+    font-size: 20px
+    font-weight: 600
+
+.modal-error-title
+    font-size: 28px
+    font-weight: 600
+    margin: 24px 0 11px 0
+
+.modal-error-title-sub
+    font-size: 18px
+    opacity: .6
+
+.modal-error-btn
+    margin: 0
+    padding: 8px 12px
+    margin-top: 32px
+
+.modal-error-inner
+    min-height: 238px
