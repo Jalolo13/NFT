@@ -380,7 +380,8 @@ button {
 }
 
 .modal-block {
-  width: 44%;
+  width: 100%;
+  max-width: 668px;
   min-height: 328px;
   background: #111113;
   border-radius: 8px;
