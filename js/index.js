@@ -40,6 +40,13 @@ const eventRegistration = () => {
     }
 };
 
+modal.addEventListener("click", (e) => {
+    if (!e.target.closest(".modal-block")) {
+        modal.style.opacity = 0;
+        modal.style.zIndex = -1;
+    }
+});
+
 modalClose.addEventListener("click", () => {
     modal.style.opacity = 0;
     modal.style.zIndex = -1;

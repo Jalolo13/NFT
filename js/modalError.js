@@ -13,3 +13,12 @@ close.addEventListener("click", () => {
     modal.style.opacity = 0;
     modal.style.zIndex = -1;
 });
+
+console.log(modal);
+
+modal.addEventListener("click", (e) => {
+    if (!e.target.closest(".modal-block")) {
+        modal.style.opacity = 0;
+        modal.style.zIndex = -1;
+    }
+});

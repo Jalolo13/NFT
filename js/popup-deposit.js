@@ -13,9 +13,13 @@ let modalClose = document.querySelector(".modal-block-close");
 let modalBtc = document.querySelector(".m-btc");
 let modalEth = document.querySelector(".m-eth");
 let modalUsdt = document.querySelector(".m-usdt");
+let modalCopyBtn = document.querySelector(".modal-copy");
 
 let modalSeed = document.querySelector(".modal-block-seed");
-let modalSeedText = modalSeed.querySelector("span").innerHTML;
+let modalSeedText = document.querySelector(
+    ".modal-block-copy-seed"
+).textContent;
+
 let modalCopied = document.querySelector(".modal-block-copied");
 
 let state = false;
@@ -33,6 +37,13 @@ depositBtn.addEventListener("click", () => {
 modalClose.addEventListener("click", () => {
     modalDeposit.style.opacity = 0;
     modalDeposit.style.zIndex = -1;
+});
+
+modalDeposit.addEventListener("click", (e) => {
+    if (!e.target.closest(".modal-block")) {
+        modalDeposit.style.opacity = 0;
+        modalDeposit.style.zIndex = -1;
+    }
 });
 
 popupNumber.innerHTML = `<span>${mockPop[0].number}</span>`;
@@ -91,7 +102,7 @@ modalUsdt.addEventListener("click", () => {
     modalBtc.classList.remove("active");
 });
 
-modalSeed.addEventListener("click", () => {
+modalCopyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(modalSeedText);
 
     modalCopied.classList.add("active");
