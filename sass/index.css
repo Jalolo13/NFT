@@ -208,10 +208,13 @@ button {
 }
 
 .main-nft-cases {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 24px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[10];
+      grid-template-rows: repeat(10, 1fr);
+  grid-gap: 24px;
   margin-top: 24px;
 }
 
@@ -234,6 +237,18 @@ button {
 
 .account-inventory-adaptive {
   display: none;
+}
+
+.yellow-card {
+  background: radial-gradient(80.63% 100% at 50% 0%, rgba(235, 85, 1, 0.5775) 0%, rgba(235, 87, 1, 0.255) 100%);
+}
+
+.blue-card {
+  background: radial-gradient(80.63% 100% at 50% 0%, rgba(1, 102, 235, 0.385) 0%, rgba(1, 102, 235, 0.17) 100%);
+}
+
+.purple-card {
+  background: radial-gradient(80.63% 100% at 50% 0%, rgba(235, 1, 226, 0.385) 0%, rgba(235, 1, 227, 0.17) 100%);
 }
 
 .faq-main {
@@ -961,6 +976,38 @@ button {
   margin-top: 32px;
 }
 
+.what-get-card {
+  max-width: 207px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-top: 14px;
+  border-radius: 4px;
+}
+
+.what-get-card p {
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.rectangle {
+  width: 100%;
+  height: 10px;
+}
+
 .roulette-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1037,14 +1084,6 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
-}
-
-.inventory-card:nth-child(odd) {
-  background: radial-gradient(80.63% 100% at 50% 0%, rgba(1, 102, 235, 0.385) 0%, rgba(1, 102, 235, 0.17) 100%);
-}
-
-.inventory-card:nth-child(even) {
-  background: radial-gradient(80.63% 100% at 50% 0%, rgba(235, 85, 1, 0.5775) 0%, rgba(235, 87, 1, 0.255) 100%);
 }
 
 .inventory-card-inner {
@@ -1262,6 +1301,10 @@ button {
         -ms-flex-align: center;
             align-items: center;
   }
+  .main-nft-cases {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 1065px) {
@@ -1276,10 +1319,6 @@ button {
   }
   .main-block-images {
     margin: 0 50px;
-  }
-  .main-nft-cases {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 
@@ -1355,6 +1394,10 @@ button {
   }
   .roulette-title {
     margin-top: 20px;
+  }
+  .main-nft-cases {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 

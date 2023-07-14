@@ -133,9 +133,10 @@ button
     margin: 35px 0 35px 35px
 
 .main-nft-cases
-    display: flex
-
-    gap: 24px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(10, 1fr)
+    grid-gap: 24px
     margin-top: 24px
 
 .main-nft-case
@@ -154,3 +155,12 @@ button
 
 .account-inventory-adaptive
     display: none
+
+.yellow-card
+    background: radial-gradient(80.63% 100% at 50% 0%, rgba(235, 85, 1, 0.5775) 0%, rgba(235, 87, 1, 0.255) 100%)
+
+.blue-card
+    background: radial-gradient(80.63% 100% at 50% 0%, rgba(1, 102, 235, 0.385) 0%, rgba(1, 102, 235, 0.17) 100%)
+
+.purple-card
+    background: radial-gradient(80.63% 100% at 50% 0%, rgba(235, 1, 226, 0.385) 0%, rgba(235, 1, 227, 0.17) 100%)
