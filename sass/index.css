@@ -359,7 +359,7 @@ button {
   transition: .5s ease-in-out;
 }
 
-.modal-registration, .modal-deposit, .modal-error {
+.modal-registration, .modal-deposit, .modal-error, .modal-win {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1049,6 +1049,71 @@ button {
   background: #2281ff;
 }
 
+.modal-win-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.modal-win-text {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: .6;
+  margin-top: 12px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.modal-win-img {
+  padding: 40px 55px;
+  border: 3px solid #368dff;
+  border-radius: 4px;
+  margin: 32px 0 16px 0;
+}
+
+.modal-win-subtitle, .modal-win-btn-text {
+  font-size: 14px;
+  opacity: .6;
+}
+
+.modal-win-btn {
+  padding: 11px 22px;
+  border-radius: 8px;
+  background: #0166eb;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  margin: 32px 12px;
+}
+
+.modal-win-btn:hover {
+  background: #2281ff;
+}
+
+.modal-win-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 48px;
+  width: 100%;
+  max-width: 571px;
+}
+
+.modal-win-block button {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
 .you-won {
   font-size: 34px;
 }
@@ -1399,6 +1464,9 @@ button {
   .main-nft-cases {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  .modal-win-title {
+    font-size: 26px;
   }
 }
 
